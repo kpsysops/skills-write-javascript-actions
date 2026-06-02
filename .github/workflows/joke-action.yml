@@ -16,11 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Get Joke
-        id: get joke
+        id: get-joke
         uses: ./
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ github.event.issue.number }}
           body: ${{ steps.get-joke.outputs.joke }}
-          
