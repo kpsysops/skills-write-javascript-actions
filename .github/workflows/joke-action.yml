@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   joke:
-    if: startsWith(github.event.comment.body, '/joke')
+    #if: startsWith(github.event.comment.body, '/joke')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
